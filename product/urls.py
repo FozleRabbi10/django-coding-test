@@ -18,4 +18,5 @@ urlpatterns = [
     #     'product': True
     # }), name='list.product'),
     path('list/', ProductList.as_view(), name='list.product'),
+
 ]
