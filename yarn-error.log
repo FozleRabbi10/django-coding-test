@@ -1,0 +1,61 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\Users\User\.virtualenvs\django-coding-test-6M4dqytb\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;c:\composer;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\xampp\php;C:\Program Files\Git\cmd;C:\Users\User\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\User\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\User\AppData\Local\Programs\Python\Python310\;C:\Users\User\AppData\Local\Microsoft\WindowsApps;D:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\User\AppData\Roaming\Composer\vendor\bin;C:\Users\User\AppData\Roaming\npm;C:\Program Files\JetBrains\PyCharm Community Edition 2022.1.4\bin;;C:\Users\User\AppData\Roaming\nvm;C:\Program Files\nodejs
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  12.22.12
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.3.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\User\AppData\Roaming\nvm\v12.22.12\node_modules\yarn\lib\cli.js:141517:19)
+      at Object.onceWrapper (events.js:420:28)
+      at ClientRequest.emit (events.js:314:20)
+      at TLSSocket.emitRequestTimeout (_http_client.js:715:9)
+      at Object.onceWrapper (events.js:420:28)
+      at TLSSocket.emit (events.js:326:22)
+      at TLSSocket.Socket._onTimeout (net.js:483:8)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7)
+
+npm manifest: 
+  {
+    "name": "test_d",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "watch": "vue-cli-service serve",
+      "build": "vue-cli-service build",
+      "dev": "vue-cli-service build --mode development --watch"
+    },
+    "dependencies": {
+      "axios": "^0.25.0",
+      "core-js": "^3.6.5",
+      "jquery": "^3.6.0",
+      "startbootstrap-sb-admin-2": "^4.1.4",
+      "vue": "^2.6.11",
+      "vue-input-tag": "^2.0.7",
+      "vue2-dropzone": "^3.6.0"
+    },
+    "devDependencies": {
+      "@vue/cli-plugin-babel": "^5.0.8",
+      "@vue/cli-service": "^5.0.8",
+      "node-sass": "^4.12.0",
+      "sass-loader": "^8.0.2",
+      "vue-cli-plugin-source-dir": "^0.1.0",
+      "vue-template-compiler": "^2.6.11"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
