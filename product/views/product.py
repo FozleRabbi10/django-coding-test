@@ -1,6 +1,7 @@
 from django.views import generic
 from django.views.generic import ListView
 from product.models import Variant, Product
+from django.core.paginator import Paginator
 
 
 class CreateProductView(generic.TemplateView):
@@ -15,6 +16,7 @@ class CreateProductView(generic.TemplateView):
 
 
 class ProductList(ListView):
+    paginate_by = 2
     model = Product
     context_object_name = 'product_list'
     template_name = 'products/list.html'
