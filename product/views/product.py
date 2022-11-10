@@ -5,13 +5,17 @@ from product.models import Variant, Product, ProductVariant
 from django.core.paginator import Paginator
 
 
-class CreateProductView(generic.TemplateView):
+class CreateProductView(generic.CreateView):
+    model = Product
     template_name = 'products/create.html'
+    fields = "__all__"
+    success_url = '/product/list/'
 
     def get_context_data(self, **kwargs):
         context = super(CreateProductView, self).get_context_data(**kwargs)
         variants = Variant.objects.filter(active=True).values('id', 'title')
         context['product'] = True
+
         context['variants'] = list(variants.all())
         return context
 
@@ -34,9 +38,11 @@ class ProductList(ListView):
     def get_context_data(self, **kwargs):
         context = super(ProductList, self).get_context_data(**kwargs)
         context['variants'] = Variant.objects.all()
+
         context['search'] = 'search'
-        context['request'] = ''
-        if self.request.GET:
-            context['request'] = self.request.GET['title__icontains']
+
+        # context['request'] = ''
+        # if self.request.GET:
+        #     context['request'] = self.request.GET['title__icontains']
 
         return context

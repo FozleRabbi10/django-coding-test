@@ -244,7 +244,7 @@ export default {
       };
 
       axios
-        .post("/product", product)
+        .post("/product/create/", product)
         .then((response) => {
           console.log(response.data);
         })
